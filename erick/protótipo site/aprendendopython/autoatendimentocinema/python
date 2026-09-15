@@ -1,0 +1,32 @@
+import nt
+
+quantidade_de_ingressos_filme_infantil_1 = 50
+quantidade_de_ingressos_filme_adulto_1 = 30
+quantidade_de_ingressos_filme_adulto_2 = 100
+cadeiras_preferenciais_idosos = 10
+meia_entrada_12_anos = 23.50
+idade = 20
+
+print("Bem-vindo ao sistema de autoatendimento do cinema!")
+print()
+
+idade = int(input("Digite sua idade: "))
+print()
+
+while True:
+    if idade <= 0:
+        print("Idade inválida. Digite um número válido.")
+        idade = int(input("Digite sua idade: "))
+        print()
+    else:
+        break
+if idade < 18:
+    print(f"Você é menor de idade.\n Recomendamos que assista ao filme infantil 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1})")
+elif idade >= 18 and idade < 60:
+    print(f"Você é adulto.\n Recomendamos que assista ao filme adulto 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_1})")
+else:
+    print(f"Você é idoso.\n Recomendamos que assista ao filme adulto 2 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_2}) e você tem disponível {cadeiras_preferenciais_idosos} cadeiras preferenciais.")
+if idade == 12:
+    print(f"Você tem {idade} anos.\n Recomendamos que assista ao filme infantil 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1}) e você tem direito a meia entrada no valor de R${meia_entrada_12_anos}.")
+
+
