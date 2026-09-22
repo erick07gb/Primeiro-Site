@@ -6,6 +6,10 @@ quantidade_de_ingressos_filme_adulto_2 = 100
 cadeiras_preferenciais_idosos = 10
 meia_entrada_12_anos = 23.50
 idade = 20
+filme_infantil_1 = "Filme Infantil 1"
+filme_adulto_1 = "Filme Adulto 1"
+filme_adulto_2 = "Filme Adulto 2"
+
 
 print("Bem-vindo ao sistema de autoatendimento do cinema!")
 print()
