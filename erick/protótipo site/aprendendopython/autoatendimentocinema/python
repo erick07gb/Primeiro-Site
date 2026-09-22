@@ -31,3 +31,22 @@ else:
     print(f"Você é idoso.\n Recomendamos que assista ao filme adulto 2 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_2}) e você tem disponível {cadeiras_preferenciais_idosos} cadeiras preferenciais.")
 if idade == 12:
    print(f"Você tem {idade} anos.\n Recomendamos que assista ao filme infantil 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1}) e você tem direito a meia entrada no valor de R${meia_entrada_12_anos}.")
+print()
+
+print("Obrigado por utilizar o sistema de autoatendimento do cinema! ")
+print()
+
+if Filme_infantil_1:
+    print(f"Gostaria de classificar o {filme_infantil_1} que você assistiu? ") 
+classificacao = input("Digite 'sim' ou 'não': ")
+if classificacao.strip().capitalize() == "sim":
+    print(f"Você escolheu classificar o {filme_infantil_1}. ")
+else:
+    print("ok, sem problemas. ")
+while True:
+    nota = input("Digite sua nota de 1 a 5: ")
+    if nota.isdigit() and int(nota) >= 1 and int(nota) <= 5:
+        print(f"Você deu a nota {nota} para o {filme_infantil_1}. ")
+        break
+    else:
+        print("Nota inválida. Digite um número válido de 1 a 5. ")
