@@ -20,7 +20,7 @@ print(type(fez_inscrição))
 
 while True:
     nome = input("Digite seu nome: ")
-    if nome.strip().capitalize() == "Erick": #verifica se o nome digitado é igual a "Erick"
+    if nome .strip() .capitalize() == "Erick": #verifica se o nome digitado é igual a "Erick"
         print("Nome correto.")
         break #sai do loop quando o nome estiver correto
     else:
@@ -53,7 +53,6 @@ print()
 media = (Nota_1 + Nota_2 + Nota_3 + Nota_4) / 4  
 
 print(f"Sua média é: {media}")
-
 if media >= 7: #verifica se a média é maior ou igual a 7
     print("Parabéns! Você foi aprovado.")
 else:

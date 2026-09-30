@@ -9,7 +9,7 @@ idade = 20
 filme_infantil_1 = "Toy Story 4"
 filme_adulto_1 = "Vingadores: Ultimato"
 filme_adulto_2 = "Homem de Ferro 3"
-Nota = 1,2,3,4,5
+nota = 1,2,3,4,5
 
 print("Bem-vindo ao sistema de autoatendimento do cinema!")
 print()
@@ -25,31 +25,37 @@ while True:
     else:
        break
 if idade < 18:
-    print(f"Você é menor de idade.\n Recomendamos que assista ao filme infantil 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1})")
+    filme_recomendado = filme_infantil_1
+    print(f"Você é menor de idade.\n Recomendamos que assista ao {filme_infantil_1} (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1})")
 elif idade >= 18 and idade < 60:
-    print(f"Você é adulto.\n Recomendamos que assista ao filme adulto 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_1})")
+    filme_recomendado = filme_adulto_1
+    print(f"Você é adulto.\n Recomendamos que assista ao {filme_adulto_1} (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_1})")
 else:
-    print(f"Você é idoso.\n Recomendamos que assista ao filme adulto 2 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_2}) e você tem disponível {cadeiras_preferenciais_idosos} cadeiras preferenciais.")
+    filme_recomendado = filme_adulto_2
+    print(f"Você é idoso.\n Recomendamos que assista ao {filme_adulto_2} (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_adulto_2}) e você tem disponível {cadeiras_preferenciais_idosos} cadeiras preferenciais.")
 if idade >= 12 and idade <= 14:
-   print(f"Você tem {idade} anos.\n Recomendamos que assista ao filme infantil 1 (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1}) e você tem direito a meia entrada no valor de R${meia_entrada_12_anos}.")
+   filme_recomendado = filme_infantil_1
+   print(f"Você tem {idade} anos.\n Recomendamos que assista ao {filme_infantil_1} (quantidade de ingressos disponíveis: {quantidade_de_ingressos_filme_infantil_1}) e você tem direito a meia entrada no valor de R${meia_entrada_12_anos}.")
 print()   
 print("Obrigado por utilizar o sistema de autoatendimento do cinema! ")
 print()
 
-print(f"você gostaria de classificar o {filme_infantil_1} com uma nota de 1 a 5?")
+print(f"você gostaria de classificar o {filme_recomendado} com uma nota de 1 a 5?")
 resposta = input("sim ou não: ")
 if resposta == "sim":
-    nota = int(input("Digite a nota de 1 a 5: "))
-    print(f"Obrigado por classificar o {filme_infantil_1} com a nota {nota}!")
+    while True :
+       nota = int(input("Digite a nota de 1 a 5: "))
+       if nota < 1 or nota > 5:
+           print("Nota inválida. Digite um número válido. ")
+       else:
+           break
+    print(f"Obrigado por classificar o {filme_recomendado} com uma nota de {nota} ")
 else:
-    print(f"Obrigado por utilizar o sistema de autoatendimento do cinema! ")
+    print("obrigado por utilizar o nosso sistema de autoatendimento ")
 
-while True:
-    if nota < 1 or nota > 5:
-        print("Nota inválida. Digite um número válido.")
-        nota = int(input("Digite a nota de 1 a 5: "))
-    else:
-        break
-        print(f"Obrigado por classificar o {filme_infantil_1} com a nota {nota}!")
+
+
+
+
 
     
